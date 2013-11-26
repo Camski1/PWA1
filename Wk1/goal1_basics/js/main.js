@@ -183,6 +183,7 @@ console.log('------ arrays ----------');
  */
    var myArr = ['bond', 007, function(){}, true];
 
+
  /*
     - arrays can hold any value type, separated by comma
     - arrays are indexed numerically, beginning at 0
@@ -190,7 +191,10 @@ console.log('------ arrays ----------');
  */
 
     //arrays can hold any data type
-
+    console.log("index 0: ",myArr[0]);
+    console.log("index 1: ",myArr[1]);
+    console.log("index 2: ",myArr[2]);
+    console.log("index 3: ",myArr[3]);
 
 
  /*******************************************
@@ -201,7 +205,8 @@ console.log('------ arrays ----------');
     2.  console.log the sum of all the numbers in an array
 
  ********************************************/
-
+    var randArr = [10,50,100,200];
+    console.log("sum of array: ",randArr[0] + randArr[1] + randArr[2] + randArr[3]);
 
 
 /*******************************************
@@ -218,6 +223,14 @@ console.log('------ arrays ----------');
     3. output array items using string concatenation
 
  ********************************************/
+
+ var myArray = new Array();
+ //myArray = ["baseball", "football", "basketball"];
+ myArray[0] = "baseball";
+ myArray[1] = "football";
+ myArray[2] = "basketball"
+ console.log(myArray[0] +",",myArray[1] +",",myArray[2]);
+
 
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
