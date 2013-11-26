@@ -145,24 +145,24 @@ console.log('------ numbers ----------');
 
 
     //add a number to a string is always a string
-    var myStr = "6" + 2;
-    console.log("number + string: ", myStr);
+    //var myStr = "6" + 2;
+    //console.log("number + string: ", myStr);
 
 
     //other math operations will result in a number
-    myStr = "6" / 2;
-    console.log("number / string: ", myStr);
+    //myStr = "6" / 2;
+    //console.log("number / string: ", myStr);
 
 
     //order of operations: ( ), *, /, +, -
-    var num = 4 + (6 * 5 - 10) / 5;
-    console.log("order of operations: ", num);
+    //var num = 4 + (6 * 5 - 10) / 5;
+    //console.log("order of operations: ", num);
 
 
     //modulo example
-    var num1 = 10;
-    var num2 = 3;
-    console.log("remainder: ", num1%num2);
+    //var num1 = 10;
+    //var num2 = 3;
+    //console.log("remainder: ", num1%num2);
 
 
 // arrays: (definition, indexing, getter/setter)
