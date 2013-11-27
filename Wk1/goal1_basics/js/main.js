@@ -553,6 +553,14 @@ console.log('------Functions ----------');
      - type the below as an example
         functionName();
  *****************************
+   */
+     var  myctr = 1;
+     var myCounter = function(){
+        var testVar = 0;
+        myctr++;
+        console.log(myctr);
+     };
+     myCounter();
 
 
 
@@ -591,7 +599,14 @@ console.log('------Functions ----------');
     - in the function - var1 and var2 are referred to as parameters of the function
     - items inside our function we call on these variables.. such as:
  */
+ var value1 = 1;
+ var value2 = 2;
 
+ var myFn = function(var1, var2){
+    console.log(var1 + var2);
+ }
+
+ myFn(value1, value2);
 
 
 
@@ -606,6 +621,14 @@ console.log('------Functions ----------');
      5.  second time: pass a 2 into the funciton as an argument
      6.  console.log the results
  ********************************************/
+  var  myctr = 1;
+     var myCounter = function(newct){
+        
+        myctr += newct;
+        console.log(myctr);
+     };
+     myCounter(5);
+     myCounter(2);
 
 
 
@@ -637,6 +660,16 @@ console.log('------Functions ----------');
             output the same info
     4.  console.log the results
  ********************************************/
+var  myctr = 1;
+     var myCounter = function(newct){
+        var myctr = 50;
+        myctr += newct;
+        return myctr;
+     };
+     var panda1 = myCounter(5);
+     var panda2 = myCounter(2);
+     console.log(panda1);
+     console.log(panda2);
 
 
 
@@ -650,4 +683,50 @@ console.log('------Functions ----------');
  4. return Mood
  5. console.log the Results
  ********************************************/
+ 
+ var value1 = "Sunny";
+ var value2 = 10;
+
+ var mood = function(weather, waves){
+
+    if (weather==="Sunny"){
+        if (waves === 10){
+            var bobsMood = "Pumped";
+        }else if((waves <= 9) && (waves >= 5)){
+            var bobsMood = "mellow";
+        }else{
+            var bobsMood = "bummed";
+        }
+    }else if(weather ==="overcast"){
+        if((waves <=10) && (waves >= 7)){
+            var bobsMood = "jackedUp";
+        }else if((waves <= 6) && (waves >=3)){
+            var bobsMood = "totally bummed";
+        } else{
+            var bobsMood = "not happy";
+        }
+    }else{
+        var bobsMood = "sad";
+    };
+    return bobsMood;
+
+};
+
+    var bobMood = mood(value1, value2);   
+    console.log(bobMood);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
