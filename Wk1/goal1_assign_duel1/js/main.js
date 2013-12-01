@@ -44,7 +44,7 @@
 		};
 
 	};
-
+	//Winner check function
 	function winnerCheck(){
 		var result = "no winner";
 		if (plOneHealth<1 && plTwoHealth<1)
