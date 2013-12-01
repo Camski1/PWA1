@@ -4,13 +4,13 @@
 
 (function(){
 	console.log("FIGHT");
-//Players Info and stats next six lines. 
+//Player names
 	var plOne = "Dumbo";
 	var plTwo = "Colonel Hathi";
-	
+	//players starting health
 	var plOneHealth = 100;
 	var plTwoHealth = 100;
-	
+	//players max damage 
 	var plOneMaxDam = 50;
 	var plTwoMaxDam = 50;
 	//Round counter/starting point
