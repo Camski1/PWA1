@@ -37,7 +37,7 @@
 			if (result ==="no winner"){
 				round++;
 				alert(plOne +" : " + plOneHealth + "*Round" + round + " OVER" + "*  " + plTwo + " : " + plTwoHealth);
-			}else{
+			}else{//if winner is found loop will break
 				alert(result);
 				break;
 			};
