@@ -205,19 +205,21 @@ console.log(typeof str1.toString());
 */
 
 console.log('------ MORE Numbers ----------');
-
+	
+	var num = 457896;
+	var dec = 33.123456
 // Use toExponential() console.log num in exponential notation with two decimals.
-
+	console.log(num.toExponential(2));
 
 // Use toPrecision() console.log dec as four numbers.
-
+	console.log(dec.toPrecision(4));
 
 //STUDENT ACTIVITY 4:
 //What method would you use to console.log the variable dec with two decimals.
-
+	console.log(dec.toFixed(2));
 
 // Use toString() to console.log the type of num.
-
+	console.log(typeof num.toString());
 
 
 /*
@@ -240,7 +242,14 @@ console.log('------ MORE Numbers ----------');
 */
 
 console.log('------ MORE Booleans ----------');
+	var num = 9 * "k";
+	console.log (num);
 
+	if (num){
+		console.log("It\'s true, the value is: ", num);
+	}else{
+		console.log("It\'s false, the value is: ", num);
+	};
 
 	
 /*
@@ -258,34 +267,44 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 // indexOf()
 //Returns the first (least) index of an element within the array equal
 //to the specified value, or -1 if none is found.
-
+console.log(arr2.indexOf("c"));
 
 // join()
 // Joins all elements of an array into a string.
-
+console.log(arr2.join(", "));
 
 // pop()
 // Removes the last element from an array and returns that element
 // shift() removes the first element from an array.
-
+var eliment = arr1.pop();
+console.log(eliment);
+console.log(arr1);
 
 // push()
 // Adds one or more elements to the end of an array and returns the new
 //   length of the array
 // unshift() - Adds one or more elements to the front of an array.
-
+arr2.push("f");
+console.log(arr2);
 
 // reverse()
 // Reverses the order of the elements of an array
-
+console.log(arr1.reverse());
 
 // splice()
 // Adds and/or removes elements from an array.
-
+console.log(arr1);
+console.log(arr1.splice(4,2));
+console.log(arr1);
 
 // forEach()
 // Calls a function for each element in the array.
-
+console.log(arr1);
+arr1.forEach(function(element,index,array){
+	console.log("eliment", eliment);
+	console.log("index", index);
+	console.log("array", array);
+});
 
 
 
@@ -320,8 +339,21 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 */
 
 console.log('------ MORE Operators - typeof() ----------');
-
-
+console.log(typeof 5);
+console.log(typeof "hi");
+var str1 = "hello";
+console.log(typeof str1);
+console.log(typeof true);
+console.log(typeof function(){});
+console.log(typeof obj1);
+console.log(typeof [1,2,3,4,5]);
+console.log(typeof missingVariable);
+console.log(typeof myString==="undefined");
+if (typeof myString === "undefined"){
+	console.log("my string is undefined");
+}else{
+	console.log("my string is: ", myString);
+};
 /*
 	===============================================
 	MORE:  Conditionals (switch())
@@ -344,7 +376,31 @@ console.log('------ MORE Operators - typeof() ----------');
 
 */
 
+
 console.log('------ MORE Conditionals - Switch ----------');
+	
+	var fruit = "Mangoes";
+	switch (fruit){
+		case "Oranges":
+			console.log("Oranges are $0.59 a pound.");
+			break;
+		case "Apples":
+			console.log("Apples are $ 0.32 a pound.");
+			break;
+		case "Bananas":
+			console.log("Bananas are $0.48 a pound.");
+			break;
+		case "Cherries":
+			console.log("Cherries are $3.00 a pound.");
+			break;
+		case "Mangoes":
+		case "Papayas":
+			console.log("Mangoes and Papayas are $2.79 a pound.");
+			break;
+		default:
+			console.log("Sorry, we are out of " +fruit+ ".");
+	};
+
 
 /*******************************************
  STUDENT ACTIVITY 6:
@@ -355,6 +411,19 @@ console.log('------ MORE Conditionals - Switch ----------');
 			if age 18 then console.log "adult"
 			if no age then console.log "No answer"
 ********************************************/
+var age = 25;
+switch (age){
+	case 13:
+		console.log("Child.");
+		break;
+	case 18:
+		console.log("Adult.");
+		break;
+	default:
+		console.log("No answer.");
+		break;
+};
+
 
 
 
@@ -371,6 +440,11 @@ console.log('------ MORE Conditionals - Switch ----------');
 
 console.log('------ MORE Functions ----------');
 
+var bondsCars = function(){
+	return ["ferrari","lambo","vwbug"];
+};
+var cars = bondsCars();
+console.log("James Bonds Cars, ", cars);
 
 	/* 
 		Self Executing Functions
@@ -386,7 +460,10 @@ console.log('------ MORE Functions ----------');
 
 			self function - combining the 2 statement above
 				var fn = (function(){})();	
-	*/	
+	*/
+	var fn = (function(){
+		
+	})();	
 
 
 /*
