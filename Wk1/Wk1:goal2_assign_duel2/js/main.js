@@ -23,7 +23,7 @@
 		
 			//Damage taken from each player and info output via console.log.
 			plOne[1] = plOne[1] - f1;
-			plTwoH[1] = plTwo[1] - f2;
+			plTwo[1] = plTwo[1] - f2;
 			console.log(plOne[0]+" : "+plOne[1]+ " " +plTwo[0]+" : "+plTwo[1]);
 
 			//Check for victor
@@ -42,14 +42,14 @@
 	//Winner check function
 	function winnerCheck(){
 		var result = "no winner";
-		if (plOneHealth<1 && plTwoHealth<1)
+		if (plOne[1]<1 && plTwo[1]<1)
 		{
 			result = "You Both Die";
-		}else if(plOneHealth<1){
-			result = plTwo + "  WINS!!!";
-		}else if(plTwoHealth<1)
+		}else if(plOne[1]<1){
+			result = plTwo[0] + "  WINS!!!";
+		}else if(plTwo[1]<1)
 		{
-			result = plOne + "  WINS!!!";
+			result = plOne[0] + "  WINS!!!";
 		};
 		return result;
 	};
