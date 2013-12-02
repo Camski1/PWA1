@@ -12,26 +12,26 @@
 	var round = 0;
 
 	 function fight(){
-		alert(plOne + ":" + plOneHealth + "  *START*  " + plTwo + ":" + plTwoHealth);
+		alert(plOne[0] + ":" + plOne[1] + "  *START*  " + plTwo[0] + ":" + plTwo[1]);
 		for (var i = 0; i < 10; i++)
 		{
 			//Formula for finding the amount of damage recieved for each player 
-			var plOneMinDam = plOneMaxDam * .5;
-			var plTwoMinDam = plTwoMaxDam * .5;
-			var f1 = Math.floor(Math.random()*(plOneMaxDam-plOneMinDam)+plOneMinDam);
-			var f2 = Math.floor(Math.random()*(plTwoMaxDam-plTwoMinDam)+plTwoMinDam);
+			var plOneMinDam = plOne[2] * .5;
+			var plTwoMinDam = plTwo[2] * .5;
+			var f1 = Math.floor(Math.random()*(plOne[2]-plOneMinDam)+plOneMinDam);
+			var f2 = Math.floor(Math.random()*(plTwo[2]-plTwoMinDam)+plTwoMinDam);
 		
 			//Damage taken from each player and info output via console.log.
-			plOneHealth = plOneHealth - f1;
-			plTwoHealth = plTwoHealth - f2;
-			console.log(plOne+" : "+plOneHealth+ " " +plTwo+" : "+plTwoHealth);
+			plOne[1] = plOne[1] - f1;
+			plTwoH[1] = plTwo[1] - f2;
+			console.log(plOne[0]+" : "+plOne[1]+ " " +plTwo[0]+" : "+plTwo[1]);
 
 			//Check for victor
 			var result = winnerCheck();
 			console.log(result);
 			if (result ==="no winner"){
 				round++;
-				alert(plOne +" : " + plOneHealth + " *Round" + round + " OVER" + "*  " + plTwo + " : " + plTwoHealth);
+				alert(plOne[0] +" : " + plOne[1] + " *Round" + round + " OVER" + "*  " + plTwo[0] + " : " + plTwo[1]);
 			}else{//if winner is found loop will break
 				alert(result);
 				break;
