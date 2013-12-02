@@ -5,14 +5,9 @@
 (function(){
 	console.log("FIGHT");
 //Player names
-	var plOne = "Dumbo";
-	var plTwo = "Colonel Hathi";
-	//players starting health
-	var plOneHealth = 100;
-	var plTwoHealth = 100;
-	//players max damage 
-	var plOneMaxDam = 50;
-	var plTwoMaxDam = 50;
+	var plOne = ["Dumbo",100,50];
+	var plTwo = ["Colonel Hathi",100,50];
+	
 	//Round counter/starting point
 	var round = 0;
 
@@ -36,7 +31,7 @@
 			console.log(result);
 			if (result ==="no winner"){
 				round++;
-				alert(plOne +" : " + plOneHealth + "*Round" + round + " OVER" + "*  " + plTwo + " : " + plTwoHealth);
+				alert(plOne +" : " + plOneHealth + " *Round" + round + " OVER" + "*  " + plTwo + " : " + plTwoHealth);
 			}else{//if winner is found loop will break
 				alert(result);
 				break;
