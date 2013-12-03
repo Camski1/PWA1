@@ -74,12 +74,14 @@
 
        var wordCount = function(str){
         var strWC = 0;
+        var str = str.split("").length;
         for(i = 0; i < str.length; i++){
             ++strWC;
         };
+        console.log(str);
             return strWC;
        };
-
+ 
     console.log(wordCount(ipsum));
 
     //--------------------------------------------------------
