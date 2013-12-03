@@ -74,7 +74,7 @@
 
        var wordCount = function(str){
         var strWC = 0;
-        var str = str.split("").length;
+        var str = str.split("");
         for(i = 0; i < str.length; i++){
             ++strWC;
         };
@@ -87,7 +87,18 @@
     //--------------------------------------------------------
     console.log("4. sentence char count");
 
-        //PUT FUNCTION HERE
+        var charCount = function(cc1){
+            var counter = 0;
+            var cc1 = cc1.split("");
+                for(i = 0; i < cc1.length; i++){
+                ++counter;
+            };
+            
+            console.log(cc1);
+            return counter;
+       };
+
+        
 
     console.log(charCount(ipsum));
 
