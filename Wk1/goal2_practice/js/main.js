@@ -496,7 +496,11 @@ console.log("James Bonds Cars, ", cars);
 			}			
 */
 console.log('------ While / Loop ----------');
-
+var numOfBeers = 10;
+while (numOfBeers>0){
+	console.log(numOfBeers + " kegs on the wall.");
+	numOfBeers--;
+};
 	
 /*
 	===============================================
@@ -521,6 +525,9 @@ console.log('------ While / Loop ----------');
 */
 
 console.log('------For Loop ----------');
+for(var beer=10; beer>0; beer--){
+	console.log(beer + " bottles of beer on the wall.");
+};
 
 
 	/* 
@@ -534,6 +541,12 @@ console.log('------For Loop ----------');
 		- in the example below, the last index of the array would be 4 
 			- the  .length property returns the count, which would be 5	
 	*/	
+	var myNum = [1,2,3,4,5,];
+	console.log("length: ",myNum.length);
+	for(var i = 0, x =  myNum.length; i<x; i++){
+		console.log(myNum[i]);
+
+	};
 
 
 	/* 
@@ -563,7 +576,13 @@ console.log('------For Loop ----------');
 		- by using the "break" statement, any loop will stop running at the 
 			break point, and perform no more iterations
 	*/
-
+		for(var i = 0, x =  myNum.length; i<x; i++){
+		if(i===3){
+			console.log("testing out the break and it broke.");
+			break;
+		};
+		console.log("length in the loop. ",myNum[i]);
+	};
 
 
 	/*
@@ -573,6 +592,14 @@ console.log('------For Loop ----------');
 			statement will stop a loop’s current iteration, and continue 
 			on to the next iteration
 	*/
+		for(var i = 0, x =  myNum.length; i<x; i++){
+		if(i===3){
+			console.log("testing out the break and it broke.");
+	
+			continue;
+		};
+		console.log("length in the loop. ",myNum[i]);
+	};
 
 
 /*******************************************
@@ -586,6 +613,13 @@ console.log('------For Loop ----------');
 		b.  create a for loop using the faster method (4 parameters)
 			- in the loop just console.log the values
 ********************************************/
+var comicChar = ["Superman", "Batman", "Wolverine", "Iceman"];
+for(i=0; i < comicChar.length; i++){
+	console.log(comicChar[i]);
+};
+for(i = 0, x = comicChar.length; i < x; i++){
+	console.log("loop 2 ",comicChar[i]);
+};
 
 
 
