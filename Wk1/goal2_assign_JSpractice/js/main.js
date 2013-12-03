@@ -51,7 +51,7 @@
         
         for ( i = 0; i< arr.length; i++) {
         answer = answer + arr[i];
-        ++num
+        ++num;
         result = answer / num;
        };
        return result;
@@ -72,7 +72,13 @@
     console.log("3. word count");
     var ipsum = "this is test text that is being used as input to a function"
 
-        //PUT FUNCTION HERE
+       var wordCount = function(str){
+        var strWC = 0;
+        for(i = 0; i < str.length; i++){
+            ++strWC;
+        };
+            return strWC;
+       };
 
     console.log(wordCount(ipsum));
 
