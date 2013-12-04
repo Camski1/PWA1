@@ -115,7 +115,7 @@
             var cntr = 0;
             var aeiouy = aeiouy.split("");
             
-            for(x = 0; x < aeiouy; x++)
+            for(x = 0; x < aeiouy.length; x++)
                 
                 if (aeiouy[x]==="a"){
                     cntr = cntr + 1; 
