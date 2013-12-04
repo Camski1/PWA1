@@ -1,3 +1,7 @@
+//Cameron Koziski
+//12-03-13
+//Assignment: Javascript Practice
+
 // self-executing function
 (function(){
 
