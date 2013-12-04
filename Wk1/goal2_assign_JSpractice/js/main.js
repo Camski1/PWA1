@@ -70,14 +70,14 @@
 
     //--------------------------------------------------------
     console.log("3. word count");
-    var ipsum = "this is test text that is being used as input to a function hello"
+    var ipsum = "this is test text that is being used as input to a function"
 
        var wordCount = function(str){
         var strWC = 0;
         var str = str.split(" ");
         for(i = 0; i < str.length; i++)
            
-          ++strWC
+          ++strWC;
        
         console.log(str);
             return strWC;
@@ -92,10 +92,11 @@
             var counter = 0;
             var cc1 = cc1.split("");
               for(i = 0; i < cc1.length; i++)
-                ++counter;  
-                
-            return counter;
-       };
+           
+ -              ++counter;
+
+              return counter;
+         };
 
         
 
@@ -133,7 +134,7 @@
             return cntr;
         };
        
-    console.log("How many  ",vowelsInWord('JavaScript'));
+    console.log("How many vowels: ",vowelsInWord('JavaScript'));
 
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
