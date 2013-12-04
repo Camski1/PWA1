@@ -66,7 +66,7 @@
             return concatJB;
         };
 
-    console.log(fullName('James', 'Bond'));
+    console.log("Concat Names: ",fullName('James', 'Bond'));
 
     //--------------------------------------------------------
     console.log("3. word count");
@@ -75,14 +75,17 @@
        var wordCount = function(str){
         var strWC = 0;
         var str = str.split("");
-        for(i = 0; i < str.length; i++){
-            ++strWC;
-        };
+        for(i = 0; i < str.length; i++)
+           if (str[i] === " ") { 
+           strWC = strWC + 1; 
+        } 
+          ++strWC
+       
         console.log(str);
             return strWC;
        };
  
-    console.log(wordCount(ipsum));
+    console.log("Word Count: ",wordCount(ipsum));
 
     //--------------------------------------------------------
     console.log("4. sentence char count");
@@ -90,23 +93,53 @@
         var charCount = function(cc1){
             var counter = 0;
             var cc1 = cc1.split("");
-                for(i = 0; i < cc1.length; i++){
-                ++counter;
-            };
+                for(i = 0; i < cc1.length; i++)
+                
+           if (cc1[i] === " ") { 
+           counter= counter - 1; 
+        } else{
+            ++counter;
+        };
             
-            console.log(cc1);
             return counter;
        };
 
         
 
-    console.log(charCount(ipsum));
+    console.log("Character Count: ",charCount(ipsum));
 
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
 
-        //PUT FUNCTION HERE
-
+        var vowelsInWord = function(aeiouy){
+            var cntr = 0;
+            var aeiouy = aeiouy.split("");
+            
+            for(x = 0; x < aeiouy; x++)
+                
+                if (aeiouy[x]==="a"){
+                    cntr = cntr + 1; 
+                    
+                }else if(aeiouy[x]==="e"){
+                    cntr = cntr + 1;  
+                    
+                }else if(aeiouy[x]==="i"){
+                    cntr = cntr + 1; 
+                    
+                }else if(aeiouy[x]==="o"){
+                    cntr = cntr + 1; 
+                    
+                }else if(aeiouy[x]==="u"){
+                    cntr = cntr + 1; 
+                    
+                }else if(aeiouy[x]==="y"){
+                    cntr = cntr + 1; 
+                    
+                };
+                
+            return cntr;
+        };
+       
     console.log(vowelsInWord('JavaScript'));
 
     //--------------------------------------------------------
@@ -118,3 +151,9 @@
     console.log(findNum([31,22,4,67,83,6,5,4], false));
 
 })();
+
+
+
+
+
+
