@@ -79,7 +79,7 @@
            
           ++strWC;
        
-        console.log(str);
+      
             return strWC;
        };
  
@@ -139,6 +139,18 @@
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
 
+        var findNum = function(arr, boolean){
+            var odd = [];
+            var even = [];
+            for(i=0; i<arr.length; i++)
+                if(arr[i] % 2 == 0){
+                    even.push(i);
+                }else{
+                    odd.push(i);
+                }
+                console.log(even);
+                return odd;
+        }
         
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
