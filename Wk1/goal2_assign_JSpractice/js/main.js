@@ -70,15 +70,13 @@
 
     //--------------------------------------------------------
     console.log("3. word count");
-    var ipsum = "this is test text that is being used as input to a function"
+    var ipsum = "this is test text that is being used as input to a function hello"
 
        var wordCount = function(str){
         var strWC = 0;
-        var str = str.split("");
+        var str = str.split(" ");
         for(i = 0; i < str.length; i++)
-           if (str[i] === " ") { 
-           strWC = strWC + 1; 
-        } 
+           
           ++strWC
        
         console.log(str);
@@ -93,14 +91,9 @@
         var charCount = function(cc1){
             var counter = 0;
             var cc1 = cc1.split("");
-                for(i = 0; i < cc1.length; i++)
+              for(i = 0; i < cc1.length; i++)
+                ++counter;  
                 
-           if (cc1[i] === " ") { 
-           counter= counter - 1; 
-        } else{
-            ++counter;
-        };
-            
             return counter;
        };
 
@@ -109,7 +102,7 @@
     console.log("Character Count: ",charCount(ipsum));
 
     //--------------------------------------------------------
-    console.log("5. how many vowels in a word");
+    console.log("5. how many vowels in a word ");
 
         var vowelsInWord = function(aeiouy){
             var cntr = 0;
@@ -140,12 +133,12 @@
             return cntr;
         };
        
-    console.log(vowelsInWord('JavaScript'));
+    console.log("How many  ",vowelsInWord('JavaScript'));
 
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
 
-        //PUT FUNCTION HERE
+        
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
     console.log(findNum([31,22,4,67,83,6,5,4], false));
