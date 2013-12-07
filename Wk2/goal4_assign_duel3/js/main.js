@@ -1,39 +1,39 @@
 //Cameron Kozinski
-//11-27-13
-//The duel- Part I
+//12-06-13
+//The Duel - Part III
 
 (function(){
 	console.log("FIGHT");
 //Player names
-	var plOne = ["Dumbo",100,50];
-	var plTwo = ["Colonel Hathi",100,50];
+	var plOne = {name:"Dumbo",health:100,damage:20};
+	var plTwo = {name:"Colonel Hathi",health:100,damage:20};
 	
 	//Round counter/starting point
 	var round = 0;
 
 	 function fight(){
-		alert(plOne[0] + ":" + plOne[1] + "  *START*  " + plTwo[0] + ":" + plTwo[1]);
+		
 		for (var i = 0; i < 10; i++)
 		{
 			//Formula for finding the amount of damage recieved for each player 
-			var plOneMinDam = plOne[2] * .5;
-			var plTwoMinDam = plTwo[2] * .5;
-			var f1 = Math.floor(Math.random()*(plOne[2]-plOneMinDam)+plOneMinDam);
-			var f2 = Math.floor(Math.random()*(plTwo[2]-plTwoMinDam)+plTwoMinDam);
+			var plOneMinDam = plOne.damage * .5;
+			var plTwoMinDam = plTwo.damage * .5;
+			var f1 = Math.floor(Math.random()*(plOne.damage-plOneMinDam)+plOneMinDam);
+			var f2 = Math.floor(Math.random()*(plTwo.damage-plTwoMinDam)+plTwoMinDam);
 		
 			//Damage taken from each player and info output via console.log.
-			plOne[1] = plOne[1] - f1;
-			plTwo[1] = plTwo[1] - f2;
-			console.log(plOne[0]+" : "+plOne[1]+ " " +plTwo[0]+" : "+plTwo[1]);
+			plOne.health = plOne.health - f1;
+			plTwo.health = plTwo.health - f2;
+			console.log(plOne.name+" : "+plOne.health+ " " +plTwo.name+" : "+plTwo.health);
 
 			//Check for victor
 			var result = winnerCheck();
 			console.log(result);
 			if (result ==="no winner"){
 				round++;
-				alert(plOne[0] +" : " + plOne[1] + " *Round" + round + " OVER" + "*  " + plTwo[0] + " : " + plTwo[1]);
+				
 			}else{//if winner is found loop will break
-				alert(result);
+				
 				break;
 			};
 		};
@@ -42,14 +42,14 @@
 	//Winner check function
 	function winnerCheck(){
 		var result = "no winner";
-		if (plOne[1]<1 && plTwo[1]<1)
+		if (plOne.health<1 && plTwo.health<1)
 		{
 			result = "You Both Die";
-		}else if(plOne[1]<1){
-			result = plTwo[0] + "  WINS!!!";
+		}else if(plOne.health<1){
+			result = plTwo.name + "  WINS!!!";
 		}else if(plTwo[1]<1)
 		{
-			result = plOne[0] + "  WINS!!!";
+			result = plOne.name + "  WINS!!!";
 		};
 		return result;
 	};
