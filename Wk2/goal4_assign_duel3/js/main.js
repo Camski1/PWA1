@@ -4,16 +4,22 @@
 
 (function(){
 	console.log("FIGHT");
-//Player names
+//Player info
 	var plOne = {name:"Dumbo",health:100,damage:20};
 	var plTwo = {name:"Colonel Hathi",health:100,damage:20};
 	
-
+//player names on screen 
 	var dumboNm = document.querySelector("#kabal p");
 	console.log("!!!!!!",dumboNm);
-	dumboNm.innerHTML = plOne.name;
+	dumboNm.innerHTML = plOne.name +":"+ plOne.health;
+
+	var colHathiNm = document.querySelector("#kratos p");
+	console.log("!!!!!!",colHathiNm);
+	colHathiNm.innerHTML = plTwo.name +":"+ plTwo.health;
+//-----------------------------------------------------------
 
 	//Round counter/starting point
+	
 	var round = 0;
 
 
