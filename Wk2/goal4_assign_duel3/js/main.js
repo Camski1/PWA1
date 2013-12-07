@@ -50,6 +50,7 @@
 	//Winner check function
 	function winnerCheck(){
 		var result = "no winner";
+		//if both players die text will display 
 		if (plOne.health<1 && plTwo.health<1)
 		{
 			dumboNm.innerHTML="";
@@ -59,14 +60,16 @@
 				console.log("Game Over");
 			};
 			result = colHathiNm;
+		//if only dumbo's health drops to 0 col wins
 		}else if(plOne.health<1){
 			dumboNm.innerHTML="";
-			colHathiNm.innerHTML= "                      " + plTwo.name + " WINS!!!";
+			colHathiNm.innerHTML=  plTwo.name + " WINS!!!";
 			fightBtn.innerHTML = "Done!";
 			fightBtn.onclick = function(e){
 				console.log("Game Over");
 			};
 			result = plTwo;
+		//if only col health drops to 0 dumbo wins
 		}else if(plTwo.health<1){
 			dumboNm.innerHTML = "";
 			colHathiNm.innerHTML=plOne.name + " WINS!!!";
@@ -75,6 +78,7 @@
 				console.log("Game Over");
 			};
 			result = plOne;
+		//if round reaches 10 game ends in a tie
 		}else if(round === 10){
 			dumboNm.innerHTML="";
 			colHathiNm.innerHTML="Game Ends In A Tie";
@@ -88,6 +92,9 @@
 	};
 	fightBtn.onclick = function(e){
 		fight();
+
+		e.preventDefault();
+		return false;
 	};
 	
 	
