@@ -52,13 +52,37 @@
 		var result = "no winner";
 		if (plOne.health<1 && plTwo.health<1)
 		{
-			result = "You Both Die";
+			dumboNm.innerHTML="";
+			colHathiNm.innerHTML="You Both Die";
+			fightBtn.innerHTML = "Done!";
+			fightBtn.onclick = function(e){
+				console.log("Game Over");
+			};
+			result = colHathiNm;
 		}else if(plOne.health<1){
-			result = plTwo.name + "  WINS!!!";
+			dumboNm.innerHTML="";
+			colHathiNm.innerHTML= "                      " + plTwo.name + " WINS!!!";
+			fightBtn.innerHTML = "Done!";
+			fightBtn.onclick = function(e){
+				console.log("Game Over");
+			};
+			result = plTwo;
 		}else if(plTwo.health<1){
-			result = plOne.name + "  WINS!!!";
+			dumboNm.innerHTML = "";
+			colHathiNm.innerHTML=plOne.name + " WINS!!!";
+			fightBtn.innerHTML = "Done!";
+			fightBtn.onclick = function(e){
+				console.log("Game Over");
+			};
+			result = plOne;
 		}else if(round === 10){
-			result = "Game Ends In A Tie "
+			dumboNm.innerHTML="";
+			colHathiNm.innerHTML="Game Ends In A Tie";
+			fightBtn.innerHTML = "Done!";
+			fightBtn.onclick = function(e){
+				console.log("Game Over");
+			};
+			result = colHathiNm;
 		};
 		return result;
 	};
