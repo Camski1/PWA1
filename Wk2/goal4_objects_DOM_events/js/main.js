@@ -296,7 +296,7 @@ console.log('------ MORE Object examples - Objects/Functions ----------');
 console.log('------------ DOCUMENT OBJECT MODEL -------------------');
 
 //Window DOM object
-/*
+
  console.log(window);
  console.log(window.location);
  console.log(window.history);
@@ -306,8 +306,7 @@ console.log('------------ DOCUMENT OBJECT MODEL -------------------');
  console.log(document);
  console.log(document.body);
  console.log(document.head);
- */
-
+ 
 
 /*
 	==================================================================
@@ -326,7 +325,9 @@ console.log('------------ DOCUMENT OBJECT MODEL -------------------');
 */
 
 console.log('------------ getElementById -------------------');
-
+var playbox = document.getElementById("playbox");
+console.log(playbox);
+playbox.style.backgroundColor = "red";
 
 
 
@@ -340,6 +341,12 @@ console.log('------------ getElementById -------------------');
 
 console.log('------------ getElementsByTagName -------------------');
 
+var aTag = document.getElementsByTagName("a");
+console.log(aTag);
+console.log(aTag[1]);
+for(i=0 , max = aTag.length; i<max;i++){
+	console.log(aTag[i]);
+}
 
 
 
@@ -355,8 +362,11 @@ console.log('------------ getElementsByTagName -------------------');
 */
 
 console.log('------------ querySelectorAll -------------------');
+var nav = document.querySelectorAll("#nav li:last-child");
+console.log(nav);
 
-
+var cf = document.querySelectorAll(".clearfix li");
+console.log(cf);
 
 
 /*
@@ -370,7 +380,8 @@ console.log('------------ querySelectorAll -------------------');
 */
     console.log('------------ querySelector -------------------');
 
-
+var qs = document.querySelector("#nav");
+console.log(qs);
 
 
 
@@ -394,9 +405,9 @@ console.log('------------ querySelectorAll -------------------');
         Will be used in ALL future assignments.
     */
     console.log('------------ TRAVERSAL -------------------');
-
-
-
+    var apple = document.querySelectorAll("#nav li a")[2];
+    console.log(apple);
+    console.log((apple.parentNode.parentNode.parentNode).nextSibling);
 
 /*
 	==================================================================
@@ -443,9 +454,33 @@ console.log('------------ Manipulating CSS Classes -------------------');
 
 Sample Link: http://www.instructables.com/files/deriv/FJI/WGSW/FPIUQQ3K/FJIWGSWFPIUQQ3K.MEDIUM.jpg
 */
+var links = document.querySelectorAll("#nav li");
+console.log(links);
+for(i=0, max=links.length; i<max;i++){
+	var href = links[i].firstChild.getAttribute("href");
+	console.log(href);
 
+	if(href==="#1"){
+		var href2 = links[i].firstChild;
+		console.log(href2);
+		//href2.setAttribute("href","http://www.fullsail.com");
+	};
+	var aClass = links[i].firstChild.getAttribute("class");
+	console.log(aClass);
+	//links[i].firstChild.setAttribute("class","navitem active");
 
+	//links[i].firstChild.setAttribute("href", "http://google.com");
+};
 
+var navLinks  = document.querySelectorAll("#nav a");
+console.log(navLinks[1].innerHTML);
+navLinks[1].innerHTML="This link rocks!";
+
+for(i=0, x=navLinks.length;i<x;i++){
+	navLinks[i].innerHTML="Click Me "+i;
+}
+var imgsrc = document.querySelector("#contentPreview img");
+imgsrc.setAttribute("src", "http://www.instructables.com/files/deriv/FJI/WGSW/FPIUQQ3K/FJIWGSWFPIUQQ3K.MEDIUM.jpg");
 /*
 	==================================================================
 	DOM Events  (lecture slides)
@@ -479,7 +514,17 @@ console.log('------------ DOM Events Ex 1-------------------');
 
 var nav = document.querySelectorAll('#nav li a');
 
+/*for(i=0, max = nav.length; i<max; i++){
+	console.log(nav[i]);
 
+	nav[i].onclick = function(e){
+		console.log(e);
+
+		e.preventDefault();
+		return false;
+	};
+};
+*/
 /*
 // this just console.log's when a click occurs
 
@@ -488,6 +533,22 @@ var nav = document.querySelectorAll('#nav li a');
 
 
 */
+for(i=0,x=nav.length;i<x;i++){
+
+	nav[i].onclick = function(e){
+
+		for(ii=0, xx=nav.length; ii<xx; ii++){
+			nav[ii].setAttribute("class","navitem");
+
+		};
+		console.log(this);
+		this.setAttribute("class", "navitem active");
+		
+		e.preventDefault();
+		return false;
+	};	
+};
+
 
 
 /*
@@ -535,6 +596,36 @@ console.log('------------ DOM Events Ex 3 -------------------');
 
 
 */
+nav[0].setAttribute("class", "navitem active");
+
+for(i=0,x=nav.length;i<x;i++){
+
+	nav[i].onclick = function(e){
+
+//		for(ii=0, xx=nav.length; ii<xx; ii++){
+//			nav[ii].setAttribute("class","navitem");
+
+//		};
+		document.querySelector("#nav li a.active").setAttribute("class","navitem");
+		console.log(this);
+		this.setAttribute("class", "navitem active");
+		
+		e.preventDefault();
+		return false;
+	};	
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })(); // end wrapper
