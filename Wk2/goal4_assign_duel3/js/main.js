@@ -62,7 +62,10 @@
 		};
 		return result;
 	};
-	fight();
+	fightBtn.onclick = function(e){
+		fight();
+	};
+	
 	
 })();
 
