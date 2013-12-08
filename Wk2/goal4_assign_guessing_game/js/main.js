@@ -12,21 +12,21 @@
  */
  
 
-//Game variables
+//Function container
 (function (){
 
-
+//object array holding all id's and random number
   var allInfo = {
 	output:document.querySelector("#output"),
 	input:document.querySelector("#input"),
 	button:document.querySelector("button"),
 	mathRan:Math.floor((Math.random()*10)+1)
 	};
- 	//document.querySelector("#input").placeholder = "Enter your guess:";
 	console.log(allInfo.output);
 	console.log(allInfo.input);
 	console.log(allInfo.button);
 	console.log(allInfo.mathRan);
+//Round counter and remtime counter
 	var round = 0; 
 	var remTime = 3;
 	 
