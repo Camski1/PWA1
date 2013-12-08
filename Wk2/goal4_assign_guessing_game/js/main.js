@@ -26,13 +26,14 @@
 	console.log(allInfo.input);
 	console.log(allInfo.button);
 	console.log(allInfo.mathRan);
-//Round counter and remtime counter
+//Round counter and remtime counter.
+//the remTime is for finding the remaining amount of picks the user has left.
 	var round = 0; 
 	var remTime = 3;
-	 
+//game function 	 
 var game = function(){
-	//This is my obj var that will hold all info needed for game.
 	
+//This will add and subtract from my two counters each time the game is run	
 	round++
 	remTime--
 	console.log("!!!!!!"+ round);
@@ -49,7 +50,8 @@ var game = function(){
 	
 	if(info === "NaN"){
 		console.log("This is not a number please try again");
-		round--
+		round--;
+		remTime++;
 		allInfo.output.innerHTML = "This is not a number please try again";
 	}else if(round===3 && (info<allInfo.mathRan || info<allInfo.mathRan)){
 		console.log("game over");
