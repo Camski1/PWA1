@@ -49,7 +49,7 @@ var game = function(){
 	};
 	//this is taking the info from the function
 	var info = valiInp();
-	
+	//this area will find an opp response to user input and round number
 	if(info === "NaN"){
 		console.log("This is not a number please try again");
 		round--;
