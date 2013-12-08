@@ -110,6 +110,7 @@ var game = function(){
 		e.preventDefault();
 		return false;
 	};
+	
 })();
 
 
