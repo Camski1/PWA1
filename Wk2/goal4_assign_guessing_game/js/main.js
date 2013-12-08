@@ -37,6 +37,7 @@ var game = function(){
 	round++
 	remTime--
 	console.log("!!!!!!"+ round);
+	//this function will validate user input
 	var valiInp = function(){
 		userInp = parseInt(allInfo.input.value);
 		if (isNaN(userInp)){
@@ -46,6 +47,7 @@ var game = function(){
 		};
 			return info;
 	};
+	//this is taking the info from the function
 	var info = valiInp();
 	
 	if(info === "NaN"){
