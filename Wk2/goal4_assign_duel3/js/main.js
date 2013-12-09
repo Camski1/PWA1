@@ -70,7 +70,7 @@
 			fightBtn.onclick = function(e){
 				console.log("Game Over");
 			};
-			result = plTwo;
+			result = colHathiNm;
 		//if only col health drops to 0 dumbo wins
 		}else if(plrs.plTwo.health<1){
 			dumboNm.innerHTML = "";
@@ -79,7 +79,7 @@
 			fightBtn.onclick = function(e){
 				console.log("Game Over");
 			};
-			result = plOne;
+			result = colHathiNm;
 		//if round reaches 10 game ends in a tie
 		}else if(round === 10){
 			dumboNm.innerHTML="";
