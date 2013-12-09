@@ -424,6 +424,23 @@ STUDENT ACTIVITY
 */
 
     console.log('------------ Math Methods -------------------');
+	var rand = (Math.random()*10+1);
+
+ 	console.log(rand);
+
+ 	var num = Math.floor(rand);
+ 	console.log(num);
+
+ 	var tagbob = document.getElementById("tagbox").innerHTML = Math.random();
+ 	console.log(tagbox);
+
+ 	var tagbob = document.getElementById("tagbox").innerHTML = Math.max(5,12);
+ 	console.log(tagbox);
+ 	var tagbob = document.getElementById("tagbox").innerHTML = Math.min(5,12);
+	console.log(tagbox);
+	var tagbob = document.getElementById("tagbox").innerHTML = Math.round(2.5);
+ 	console.log(tagbox);
+
 
 
 
@@ -442,10 +459,12 @@ STUDENT ACTIVITY
 
 
     ****************************************************************************/
-
-
-
-
+    
+    console.log(Math.min(100, 1000, 50, 2, 55, 75));
+    console.log(Math.max(100, 1000, 50, 2, 55, 75));
+    console.log(Math.floor(Math.random()*10000+100));
+    console.log(Math.round(Math.random()*100+10));
+ 
 /*	==================================================================
 	Date Methods
 	------------------------------------------------------------------
@@ -458,6 +477,20 @@ STUDENT ACTIVITY
 */
 
     console.log('------------ Date Methods -------------------');
+	var d = new Date();
+   // console.log(new Date());
+   // console.log(d.getDate());
+  //  console.log(d.getDay());
+   // console.log(d.getFullYear());
+    //console.log(d.getHours());
+    //console.log(d.getMilliseconds());
+	//console.log(d.getTime());
+
+	 //d.setFullYear(2021,0,01);
+	//document.getElementById("tagbox").innerHTML=d;
+	console.log(d.toLocaleDateString());
+
+
 
 
 
