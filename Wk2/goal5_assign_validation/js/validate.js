@@ -6,7 +6,7 @@
 //console.log(id);
 
 (function(){
-
+console.log(document.querySelectorAll("input"));
     myform.onsubmit = function(e){
 
         //Below is one example of the validateField call with an argument.
