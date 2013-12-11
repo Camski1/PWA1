@@ -12,9 +12,8 @@
         //Below is one example of the validateField call with an argument.
         //You must dynamically retrieve the ID name from the DOM/HTML.
 
-        var id = document.getElementsByTagName("input")[0];
 
-        for(i=0, id=document.getElementsByTagName("input").length; i<id; i++){
+        for(i=0, id=document.querySelectorAll("input").length; i<id; i++){
 
                 id = document.querySelectorAll("input");
                 console.log(id);
@@ -36,7 +35,7 @@
 
         if (inputName.name === "f_username"){
             var pattern = /^[A-Z][a-z]|^[A-Z][a-z]\d[A-Z][a-z]+$/;
-            return inputName;
+            
         }else if (inputName.name === "f_emai"){
             var pattern = /(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})/;
         }else if (inputName.name === "f_phone"){
