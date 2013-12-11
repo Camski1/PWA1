@@ -11,16 +11,16 @@ console.log(document.querySelectorAll("input"));
 
         //Below is one example of the validateField call with an argument.
         //You must dynamically retrieve the ID name from the DOM/HTML.
-
+        
 
         for(i=0, id=document.querySelectorAll("input").length; i<id; i++){
-
+                
                 id = document.querySelectorAll("input")[i];
                 console.log(id);
 
-            validateField(id);  //id = is the form input field ID
+            
         };  
-        
+            validateField(id);  //id = is the form input field ID
         
         
                 e.preventDefault();
