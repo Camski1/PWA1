@@ -15,10 +15,10 @@
 
         for(i=0, id=document.querySelectorAll("input").length; i<id; i++){
 
-                id = document.querySelectorAll("input");
+                id = document.querySelectorAll("input")[i];
                 console.log(id);
 
-            validateField(id[i]);  //id = is the form input field ID
+            validateField(id);  //id = is the form input field ID
         };  
         
         
@@ -48,9 +48,9 @@
             //You will need to create an else-if statement for each input field id.  The
             //      format will be similar to the above IF statement.
 
+        console.log(inputName.value);
         
-        
-        var pass = pattern.test(inputName); //statement is needed here;
+        var pass = pattern.test(inputName.value); //statement is needed here;
         var errorMsg = inputName.nextSibling.nextSibling.nextSibling.nextSibling;
 
         if (!pass || inputName.value.length < 2){
