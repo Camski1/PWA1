@@ -350,9 +350,9 @@ STUDENT ACTIVITY
 	split()		string.split.(RegExp): cuts a string into an array, making cuts at matches
 */
 
-	var emailRegEx = /(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})/;
+	var emailRegEx = /^[A-Z][a-z]{2,20}|^[A-Z][a-z]\d[A-Z][a-z]+$/;
 	var email = new RegExp(emailRegEx);
-	var str = "My personal email is jc@google.com but my work email is jc@yahoo.com";
+	var str = "Cameron Kozinski";
 	
 
 	console.log(email.test(str));
