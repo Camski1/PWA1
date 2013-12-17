@@ -68,11 +68,53 @@
  -----------------------------------------------------------------------
  */
     var Blog = function(str,date){
-        console.log(this);
+        //var LOL = "Funny";
+//console.log(this);
         this.body = str;
         this.date = date;
-        console.log("str is equal to: ",str);
-        console.log("this.body is equal to: ",this.body);
+        //console.log("str is equal to: ",str);
+        //console.log("this.body is equal to: ",this.body);
+
+/*        this.toHTML = function(highlight){
+            var blogHTML ="";
+
+            blogHTML += highlight ? "<p style='background-color:#EEEEEE'>" : "<p>";
+            
+             blogHTML += "<strong>" + (this.date.getMonth()+1)+ "/"+
+             this.date.getDate()+"/"+
+             this.date.getFullYear()+"</strong><br/>"+
+             this.body + "</p>";
+             return blogHTML;
+        };
+
+        this.toString = function(){
+            console.log("["+ (this.date.getMonth()+1)+ "/"+this.date.getDate()+"/"+
+             this.date.getFullYear()+"] "+ this.body);
+        };*/
+
+    };
+    Blog.prototype.companyName = "Full Sail";
+
+    Blog.prototype.toHTML = function(highlight){
+        
+            var blogHTML ="";
+
+            blogHTML += highlight ? "<p style='background-color:#EEEEEE'>" : "<p>";
+            
+            blogHTML += "<strong>" + (this.date.getMonth()+1)+ "/"+
+            this.date.getDate()+"/"+
+            this.date.getFullYear()+"</strong><br/>"+
+            this.body + "</p>";
+            return blogHTML;
+    
+
+    };
+
+    Blog.prototype.toString = function(){
+    
+       console.log("["+ (this.date.getMonth()+1)+ "/"+this.date.getDate()+"/"+
+       this.date.getFullYear()+"] "+ this.body); 
+
     };
 
     // array of blog items
@@ -98,7 +140,7 @@
         blogText = "";
 
         while(i<blog.length){
-            if (i % 2 ===0){
+     /*       if (i % 2 ===0){
                 blogText+= "<p style='background-color:#EEEEEE'>";
             }else{
                 blogText +="<p>";
@@ -108,12 +150,23 @@
              blog[i].date.getFullYear()+"</strong><br/>"+
              blog[i].body + "</p>";
             
-            i++;
-        };
-        document.getElementById("blog").innerHTML = blogText;
+            
+        };*/
+            
+    blogText+= blog[i].toHTML(i % 2===0);
+    blog[i].toString();
+    i++;
+    };
+    //var tmpName = blog[0].companyName = "Full Sail";
+    console.log(blog[0].companyName);
+    console.log(blog[1].companyName);
+    console.log(blog[2].companyName);
+    console.log(blog[3].companyName);
+    document.getElementById("blog").innerHTML = blogText;
         e.preventDefault
         return false;
-    };
+
+};
 
     button.onclick = showBlog;
 
