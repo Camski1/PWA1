@@ -16,14 +16,14 @@ console.log("start canvas");
 */
 
     //1. get the <canvas> element
-
+    var headID = document.getElementById("goal9header");
     //2. call the getContext('2d') built in HTML5 object (many properties and
     //          methods for drawing paths, boxes, circles, images, etc...
-
+    var ctx = headID.getContext("2d");
     //3. set text attributes
-
+    ctx.font= "bold 30px Arial";
     //4. write text to the <canvas>
-
+    ctx.fillText("PWA1 / Goal 9 / Basic Canvas", 10,50);
 
 //*****************************************************************************
 
@@ -32,13 +32,15 @@ console.log("start canvas");
     Dynamically define a Canvas
     -------------------------------------------------------------------*/
         //1. create a Canvas dynamically
-
+        var canvas = document.createElement("canvas");
         //2. adds the canvas to the DOM
-
+        document.body.appendChild(canvas);
         //3. call the getContext('2d') built in HTML5 object (many properties and
         //          methods for drawing paths, boxes, circles, images, etc...
-
+        var ctx = canvas.getContext("2d")
         //4. set canvas boarder size
+        canvas.width = 400;
+        canvas.height = 400;
 
     //-------------------------------------------------------------------
 
@@ -51,7 +53,8 @@ console.log("start canvas");
          3.  The text should be 25px, Georgia (font).
          4.  Place the text below the header created above.
          -------------------------------------*/
-
+         ctx.font= "25px Georgia";
+         ctx.fillText("Hello, World",15,25);
 
 
     /* ================================================
@@ -72,13 +75,15 @@ console.log("start canvas");
 
 
         //1. Declare that we are about to draw a new path or resets a current path
-
+        ctx.beginPath();
         //2. Style the stroke color (red) and stroke size
-
+        ctx.strokeStyle = "#ff0000";
+        ctx.lineWidth = 2;
         //3. Defines the starting and ending point of a line
-
+        ctx.moveTo(200,50);
+        ctx.lineTo(200,400);
         //4. Renders (draws) the line to the canvas
-
+        ctx.stroke();
 
         /*****************************************
             STUDENT ACTIVITY 2:
@@ -87,8 +92,15 @@ console.log("start canvas");
             1.  Using the code above, draw a rectangle.
             2.  Do the above with only 3 lines of code.
         -------------------------------------*/
-
-
+       
+        
+        ctx.lineTo(100,400);
+        ctx.lineTo(100,50);
+        ctx.lineTo(200,50);
+        
+        
+       
+        ctx.stroke();
 
     /* ================================================
         Draw a "Rectangle" and fill it with a color on the Canvas
@@ -103,7 +115,7 @@ console.log("start canvas");
     --------------------------------------------------------------------*/
 
             //1. Declare that we are about to draw a new path or resets a current path
-
+            
             //2. Define the fill color
 
             //3. Defines the rectangle at x-175, y-50 with a width and height of 50
