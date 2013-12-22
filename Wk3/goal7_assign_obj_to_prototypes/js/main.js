@@ -11,12 +11,19 @@ var names = ["Cameron","Kristen","Heather","Seth","Brady"];
 
 var randNames = function(names){
 	
-	var pl1 = Math.floor(Math.random()*names.length);
-	var pl2 = Math.floor(Math.random()*names.length);
-	var pl3 = Math.floor(Math.random()*names.length);
+	var people = [];
+	var pl1=Math.floor(Math.random()*names.length);
+	var pl2=Math.floor(Math.random()*names.length);
+	var pl3=Math.floor(Math.random()*names.length);
 
-	 
+	while(f1===f2){
+		var pl1=Math.floor(Math.random()*names.length);
+		var pl2=Math.floor(Math.random()*names.length);
+		var pl3=Math.floor(Math.random()*names.length);
+	};
 
-}
-
+	};
+	return people;
+};
+console.log(randNames(names));
 
